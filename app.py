@@ -5,7 +5,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return "Hello World!"
+    message = "Hello! Welcome to the backend server for Zebu's Pizzeria! Please access the sublinks to access the data: "
+    link = "http://zebu-backend.halim.ca/size http://zebu-backend.halim.ca/crust http://zebu-backend.halim.ca/toppings http://zebu-backend.halim.ca/toppingsList"
+    return message + link
 
 def parse_data(dataItems):
     itemList = []
